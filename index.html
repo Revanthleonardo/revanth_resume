@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revanth | Full Stack Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        
+        .resume-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(to right, #0ea5e9, #3b82f6);
+            bottom: -4px;
+            left: 0;
+            border-radius: 9999px;
+        }
+        
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .resume-container {
+                box-shadow: none;
+                max-width: none;
+                margin: 0;
+            }
+            body {
+                background: white !important;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Extra mobile optimizations */
+        @media (max-width: 640px) {
+            .header-name {
+                font-size: 2.75rem !important;
+            }
+            .content-padding {
+                padding-left: 1.25rem !important;
+                padding-right: 1.25rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans">
+    <!-- Top Bar - Fully mobile optimized -->
+    <div class="no-print bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-[1000px] mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-inner">R</div>
+                <h1 class="text-2xl font-semibold tracking-tight text-slate-900">Revanth</h1>
+            </div>
+            
+            <!-- Mobile-friendly nav -->
+            <div class="flex items-center gap-3 sm:gap-6 text-sm">
+                <!-- Links hidden on very small screens, shown on sm+ -->
+                <div class="hidden sm:flex items-center gap-5">
+                    <a onclick="document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })" 
+                       class="flex items-center gap-1.5 text-slate-600 hover:text-slate-900 font-medium cursor-pointer">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span class="hidden md:inline">Experience</span>
+                    </a>
+                    <a onclick="document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })" 
+                       class="flex items-center gap-1.5 text-slate-600 hover:text-slate-900 font-medium cursor-pointer">
+                        <i class="fa-solid fa-code"></i>
+                        <span class="hidden md:inline">Skills</span>
+                    </a>
+                    <a onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })" 
+                       class="flex items-center gap-1.5 text-slate-600 hover:text-slate-900 font-medium cursor-pointer">
+                        <i class="fa-solid fa-rocket"></i>
+                        <span class="hidden md:inline">Projects</span>
+                    </a>
+                </div>
+                
+                <div class="h-5 w-px bg-slate-200 hidden sm:block"></div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="resume-container bg-white mx-4 sm:mx-auto mt-6 sm:mt-8 mb-12 rounded-3xl overflow-hidden border border-slate-100">
+        
+        <!-- Header - Mobile optimized -->
+        <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white px-6 sm:px-10 pt-10 pb-9">
+            <div class="flex flex-col md:flex-row md:items-end gap-6">
+                <div class="flex-1">
+                    <div class="flex items-center gap-4 mb-3">
+                        <h1 class="header-name text-5xl sm:text-6xl font-semibold tracking-tighter leading-none">Revanth</h1>
+                        <div class="px-4 py-1 text-xs font-medium bg-white/20 backdrop-blur-md rounded-3xl border border-white/30 flex items-center gap-1 whitespace-nowrap">
+                            <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                            Open to work
+                        </div>
+                    </div>
+                    <p class="text-2xl text-sky-300 font-medium tracking-tight">Full Stack Web Developer</p>
+                    
+                    <div class="flex flex-wrap gap-x-6 gap-y-3 mt-8 text-sm">
+                        <a href="https://github.com/Revanthleonardo" target="_blank" 
+                           class="flex items-center gap-2 hover:text-sky-300">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="break-all">github.com/Revanthleonardo</span>
+                        </a>
+                        <a href="mailto:revanthleonardo@gmail.com" 
+                           class="flex items-center gap-2 hover:text-sky-300">
+                            <i class="fa-solid fa-envelope"></i>
+                            revanthleonardo@gmail.com
+                        </a>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone"></i>
+                            88833 88393
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Chennai, Tamil Nadu
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:text-right max-w-xs mt-6 md:mt-0">
+                    <p class="text-sky-100 leading-relaxed text-lg">
+                        Passionate about building high-impact web applications with modern tools and AI.
+                    </p>
+                    <div class="text-xs mt-6 text-sky-300/80 flex items-center justify-end gap-2">
+                        <i class="fa-solid fa-circle-check"></i>
+                        AI-powered • Metrics-driven • Automation
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-padding p-6 sm:p-10 space-y-12">
+            
+            <!-- Professional Summary -->
+            <div>
+                <h2 class="section-header text-2xl font-semibold text-slate-800 mb-6">Professional Summary</h2>
+                <div class="prose text-slate-600 leading-relaxed text-base">
+                    Prolific Full Stack Web Developer with a strong passion for metrics-driven development and process automation. 
+                    Expertise in end-to-end web application development using HTML, CSS, JavaScript, SQL, and AI-powered coding tools (including Grok).<br><br>
+                    
+                    Transformed <span class="font-semibold text-slate-800">Sunshine Education Academy’s</span> operations through custom web solutions, 
+                    increasing revenue for the Arithmetic Olympiad project by <span class="font-semibold text-emerald-600">50%</span> and reducing 
+                    certificate printing costs by <span class="font-semibold text-emerald-600">30%</span>. 
+                    Currently driving SEO/SEM initiatives and building automation tools at <span class="font-semibold text-slate-800">Besttech.in</span>.
+                </div>
+            </div>
+            
+            <!-- Technical Skills -->
+            <div id="skills">
+                <h2 class="section-header text-2xl font-semibold text-slate-800 mb-6">Technical Skills</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                        <div class="flex items-center gap-2 text-sky-600 mb-4">
+                            <i class="fa-solid fa-display fa-lg"></i>
+                            <span class="font-semibold uppercase text-sm tracking-widest">Frontend</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-white text-slate-700 rounded-3xl text-sm font-medium shadow-sm">HTML5</span>
+                            <span class="px-4 py-2 bg-white text-slate-700 rounded-3xl text-sm font-medium shadow-sm">CSS3</span>
+                            <span class="px-4 py-2 bg-white text-slate-700 rounded-3xl text-sm font-medium shadow-sm">JavaScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                        <div class="flex items-center gap-2 text-violet-600 mb-4">
+                            <i class="fa-solid fa-server fa-lg"></i>
+                            <span class="font-semibold uppercase text-sm tracking-widest">Backend / Database</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-white text-slate-700 rounded-3xl text-sm font-medium shadow-sm">PHP</span>
+                            <span class="px-4 py-2 bg-white text-slate-700 rounded-3xl text-sm font-medium shadow-sm">MySQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                        <div class="flex items-center gap-2 text-amber-600 mb-4">
+                            <i class="fa-solid fa-wand-magic-sparkles fa-lg"></i>
+                            <span class="font-semibold uppercase text-sm tracking-widest">Tools &amp; Technologies</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-white text-slate-700 rounded-3xl text-sm font-medium shadow-sm">AI-assisted development (Grok &amp; LLMs)</span>
+                            <span class="px-4 py-2 bg-white text-slate-700 rounded-3xl text-sm font-medium shadow-sm">UIpath Automation</span>
+                            <span class="px-4 py-2 bg-white text-slate-700 rounded-3xl text-sm font-medium shadow-sm">SEO / SEM Modules</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience -->
+            <div id="experience">
+                <h2 class="section-header text-2xl font-semibold text-slate-800 mb-6">Professional Experience</h2>
+                
+                <!-- Besttech.in -->
+                <div class="mb-10">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Web Developer / Full Stack Developer</h3>
+                            <p class="text-blue-600">Besttech.in • Chennai (Remote / Hybrid)</p>
+                        </div>
+                        <div class="text-sm font-medium text-slate-500 mt-1 md:mt-0">March 2021 – Present</div>
+                    </div>
+                    <ul class="space-y-4 text-slate-600 text-[15.2px] pl-6 border-l border-slate-200">
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>Developed and automated a UI Path Checker tool that monitors Domain Authority (DA), Page Authority (PA), and Spam Score — significantly improving SEO efficiency and decision-making.</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>Led the design and implementation of SEO/SEM modules for multiple web pages, contributing to better search visibility and performance tracking.</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>Built full-stack web applications using HTML, CSS, JavaScript, and SQL, enhanced with AI tools for faster development and higher code quality.</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>Acted as a reliable outsourcing partner, delivering high-quality digital solutions that support business growth.</li>
+                    </ul>
+                </div>
+                
+                <!-- Sunshine Education Academy -->
+                <div class="mb-10">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Full Stack Web Developer</h3>
+                            <p class="text-blue-600">Sunshine Education Academy • Anna Nagar, Chennai</p>
+                        </div>
+                        <div class="text-sm font-medium text-slate-500 mt-1 md:mt-0">September 2018 – August 2020</div>
+                    </div>
+                    <ul class="space-y-6 text-slate-600 text-[15.2px] pl-6 border-l border-slate-200">
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>
+                            <div>Designed and developed end-to-end web applications, transforming the academy from traditional to fully digital operations.</div>
+                        </li>
+                        
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>
+                            <div class="flex-1">
+                                Created a Dynamic Reports system and Customized Bulk Certificate Creator web app for the Arithmetic Olympiad project, resulting in:
+                                <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="bg-emerald-50 border border-emerald-100 rounded-2xl px-6 py-5 flex items-center gap-4">
+                                        <div class="text-5xl font-bold text-emerald-600 leading-none">50%</div>
+                                        <div>
+                                            <div class="font-semibold text-emerald-700">increase in project revenue</div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-amber-50 border border-amber-100 rounded-2xl px-6 py-5 flex items-center gap-4">
+                                        <div class="text-5xl font-bold text-amber-600 leading-none">30%</div>
+                                        <div>
+                                            <div class="font-semibold text-amber-700">reduction in certificate printing costs through automation</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="flex gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>
+                            <div>Managed complete web development lifecycle — from requirements gathering to deployment and maintenance.</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Tekwizard -->
+                <div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Junior Scientist Trainee</h3>
+                            <p class="text-blue-600">Tekwizard • Gunidy, Chennai</p>
+                        </div>
+                        <div class="text-sm font-medium text-slate-500 mt-1 md:mt-0">July 2017 – August 2018</div>
+                    </div>
+                    <ul class="space-y-4 text-slate-600 text-[15.2px] pl-6 border-l border-slate-200">
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>Trained 50+ students at Gateway International School, Padur in electronics and programming.</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>Taught building of electronic circuits (Radio, Line Follower, Obstacle Avoider) and integration with Arduino sensors.</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-circle-check text-emerald-500 mt-1.5 flex-shrink-0"></i>Gained strong foundation in hardware-software integration and problem-solving.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Side Project -->
+            <div id="projects">
+                <h2 class="section-header text-2xl font-semibold text-slate-800 mb-6">Side Project</h2>
+                <div class="bg-gradient-to-br from-slate-50 to-white border border-slate-100 rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row gap-8">
+                    <div class="md:w-2/3">
+                        <div class="flex flex-wrap items-center justify-between gap-3">
+                            <h3 class="text-2xl font-semibold">withrevs</h3>
+                            <span class="px-5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700 rounded-3xl">Founder &amp; Content Strategist</span>
+                        </div>
+                        <p class="text-slate-500 text-sm mt-1">December 2025 – Present</p>
+                        
+                        <div class="mt-6 space-y-4">
+                            <p class="flex items-start gap-3 text-slate-600">
+                                <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+                                Founded a short-form video service delivering high-engagement Instagram Reels and YouTube Shorts that drive real revenue for local brands and small businesses.
+                            </p>
+                            <p class="flex items-start gap-3 text-slate-600">
+                                <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+                                Provide end-to-end solutions: content strategy, scripting, professional editing, captioning, and performance analytics using AI tools for maximum impact.
+                            </p>
+                            <p class="flex items-start gap-3 text-slate-600">
+                                <i class="fa-solid fa-circle-check text-emerald-500 mt-1"></i>
+                                Built supporting web applications and automation workflows to streamline client content production, scheduling, and ROI tracking.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/3 bg-white rounded-2xl p-5 flex items-center justify-center border border-slate-100 text-center">
+                        <div>
+                            <div class="text-6xl mb-4">🎬</div>
+                            <p class="text-slate-500 font-medium">Turning local businesses into viral brands through AI-powered short-form content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="no-print bg-slate-900 text-white/70 text-xs flex items-center justify-center py-5 font-medium tracking-widest">
+            Built with ❤️ and Grok
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const html = document.documentElement
+            const icon = document.getElementById('theme-icon')
+            
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark')
+                icon.classList.replace('fa-sun', 'fa-moon')
+                localStorage.theme = 'light'
+            } else {
+                html.classList.add('dark')
+                icon.classList.replace('fa-moon', 'fa-sun')
+                localStorage.theme = 'dark'
+            }
+        }
+        
+        window.onload = () => {
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark')
+                document.getElementById('theme-icon').classList.replace('fa-moon', 'fa-sun')
+            }
+            
+            console.log('%c✅ Mobile-friendly resume ready!', 'color:#0ea5e9; font-family:Space Grotesk; font-size:13px')
+            
+            const sections = document.querySelectorAll('.resume-container > div > div')
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, i) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = `${i * 80}ms`
+                        entry.target.classList.add('fade-in')
+                    }
+                })
+            }, { threshold: 0.1 })
+            
+            sections.forEach(section => observer.observe(section))
+        }
+    </script>
+</body>
+</html>
